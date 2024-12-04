@@ -14,12 +14,12 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}))
 const corsOptions = {
-  origin: "http://localhost:5173", 
-  credentials: true,             
-  optionsSuccessStatus: 200,    
+  origin: 'https://frontend-e-commerce--phi.vercel.app',  // specify the frontend origin
+  credentials: true,  // allow credentials (cookies, authentication tokens)
 };
 
-app.use(cors());
+app.use(cors(corsOptions));
+
 
 const uploadImage = require("./src/utils/uploadImage")
 
