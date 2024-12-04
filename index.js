@@ -19,7 +19,7 @@ const corsOptions = {
   optionsSuccessStatus: 200,    
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 const uploadImage = require("./src/utils/uploadImage")
 
